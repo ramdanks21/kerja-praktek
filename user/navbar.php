@@ -11,7 +11,7 @@
 <body>
 <nav class="navbar is-light    " role="navigation"  aria-label="main navigation">
     <div class="navbar-brand">
-      <a class="navbar-item" href="/index.php">
+      <a class="navbar-item" href="../index.php">
         <img src="../img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
       </a>
       <a class="navbar-item">SISTEM MANAGEMENT PERPUSTAKAAN</a>
@@ -36,7 +36,7 @@
          <a   class="navbar-item" href="user/login.php">LOGOIN</a>
         </div>
       <div class="navbar-item">
-         <a href="#" class="navbar-item">LOGOUT</a>
+         <a  class="navbar-item">LOGOUT</a>
         </div>  
       <div class="navbar-item">
          <a href="#" class="navbar-item">ABOUT US</a>

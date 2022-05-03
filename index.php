@@ -44,7 +44,7 @@
          <a href="#" class="navbar-item">ADMIN-LOGIN</a>
         </div>  
       <div class="navbar-item">
-         <a href="#" class="navbar-item">ABOUT US</a>
+         <a href="user/feedback.php" class="navbar-item">FEEDBACK</a>
         </div>
       </div>
     </div>

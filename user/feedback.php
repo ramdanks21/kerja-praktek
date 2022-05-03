@@ -51,19 +51,48 @@ include "../db/koneksi.php";
 						</div>
                         </form>
 					</div>
+                    
+
 </body>
 </html>
 
 <?php 
 if (isset($_POST['submit'])) {
-    $sql = "INSERT INTO feedback (name,email,message)
+    $sql = "INSERT INTO feedback (nama,email,message)
     VALUES 
     (
         '$_POST[username]',
         '$_POST[email]',
         '$_POST[comment]'
     )";
-    mysqli_query($con,$sql);
+     mysqli_query($con,$sql);
+    
 }
 
 ?>
+<?php 
+
+
+if(isset($_POST['submit1']))
+		{
+			if(isset($_SESSION['login_user']))
+			{
+				mysqli_query($db,"INSERT INTO issue_book Values('$_SESSION[login_user]', '$_POST[bid]', '', '', '');");
+				?>
+					<script type="text/javascript">
+						window.location="request.php"
+					</script>
+				<?php
+			}
+			else
+			{
+				?>
+					<script type="text/javascript">
+						alert("You must login to Request a book");
+					</script>
+				<?php
+			}
+		}
+
+	?>
+</div>?>
