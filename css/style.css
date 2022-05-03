@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap");
+
+.navbar-item img {
+  max-height: 4.75rem;
+}
+nav {
+  font-family: "Roboto Slab", serif;
+}
+.bg-image {
+  background-image: url("../img/smp.jpeg");
+  height: 100vh;
+  width: auto;
+  background-size: cover;
+  background-color: transparent;
+}
