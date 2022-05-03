@@ -34,7 +34,8 @@
         </div>
       
       <div class="navbar-item">
-         <a href="/user/books.php" class="navbar-item">BOOKS</a>
+         <a href="
+         user/books.php" class="navbar-item">BOOKS</a>
         </div>
       <div class="navbar-item">
          <a   class="navbar-item" href="user/login.php">STUDENT-LOGIN</a>

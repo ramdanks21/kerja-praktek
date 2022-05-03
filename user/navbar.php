@@ -12,7 +12,7 @@
 <nav class="navbar is-light    " role="navigation"  aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="/index.php">
-        <img src="/img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
+        <img src="../img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
       </a>
       <a class="navbar-item">SISTEM MANAGEMENT PERPUSTAKAAN</a>
       <a role="button" class="navbar-burger  " aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">

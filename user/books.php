@@ -1,7 +1,7 @@
 <?php 
 
 include '../db/koneksi.php';
-
+require_once __DIR__.'/navbar.php';
 
 ?>
 <!DOCTYPE html>
