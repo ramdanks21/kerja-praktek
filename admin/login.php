@@ -3,7 +3,7 @@ include '../db/koneksi.php';
 include '../user/navbar.php';
 if (isset($_POST['submit'])) {
   $count=0;
-  $rest=mysqli_query($con,"SELECT * FROM student WHERE username='$_POST[username]' && password='$_POST[password]';");
+  $rest=mysqli_query($con,"SELECT * FROM admin WHERE username='$_POST[username]' && password='$_POST[password]';");
   $count=mysqli_num_rows($rest);
   if ($count==0) {
     ?>
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     ?>
     <script>
       alert("LOGIN BERHASIL");
-      window.location="/index.php";
+      window.location="index.php";
     </script>
     <?php 
   }
