@@ -11,7 +11,7 @@ session_start();
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Document</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css" />
-  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@ session_start();
   <nav class="navbar-item navbar-dark " role="navigation"  aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="index.php">
-        <img src="../img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
+        <img src="/img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
       </a>
       <a class="navbar-item">SISTEM MANAGEMENT PERPUSTAKAAN</a>
      
@@ -41,18 +41,17 @@ session_start();
 			?>
 				 <div class="navbar-end">
            <div class="navbar-item">
-                    <a href="#" class="navbar-item">HOME</a>
+                    <a href="index.php" class="navbar-item">HOME</a>
                    </div>
                  
                  <div class="navbar-item">
-                    <a href="
-                    books.php" class="navbar-item">BOOKS</a>
+                    <a href="books.php" class="navbar-item">BOOKS</a>
                    </div>
                  <div class="navbar-item">
-                    <a   class="navbar-item" href="user/logout.php">LOGOUT</a>
+                    <a   class="navbar-item" href="logout.php">LOGOUT</a>
                    </div>
                  <div class="navbar-item">
-                    <a href="#" class="navbar-item">FEEDBACK</a>
+                    <a href="feedback.php" class="navbar-item">FEEDBACK</a>
                    </div>
          </div> 
 			<?php
@@ -60,21 +59,21 @@ session_start();
       ?>
       <div class="navbar-end">
       <div class="navbar-item">
-         <a href="#" class="navbar-item">HOME</a>
+         <a href="index.php" class="navbar-item">HOME</a>
         </div>
       
       <div class="navbar-item">
          <a href="
-         user/books.php" class="navbar-item">BOOKS</a>
+         books.php" class="navbar-item">BOOKS</a>
         </div>
       <div class="navbar-item">
-         <a   class="navbar-item" href="user/login.php">STUDENT-LOGIN</a>
+         <a   class="navbar-item" href="login.php">STUDENT-LOGIN</a>
         </div>
       <div class="navbar-item">
-         <a href="#" class="navbar-item">ADMIN-LOGIN</a>
+         <a href="login.php" class="navbar-item">ADMIN-LOGIN</a>
         </div>  
       <div class="navbar-item">
-         <a href="user/feedback.php" class="navbar-item">FEEDBACK</a>
+         <a href="feedback.php" class="navbar-item">FEEDBACK</a>
         </div>
       </div>
       <?php

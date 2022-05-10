@@ -46,13 +46,13 @@ session_start();
                  
                  <div class="navbar-item">
                     <a href="
-                    books.php" class="navbar-item">BOOKS</a>
+                    user/books.php" class="navbar-item">BOOKS</a>
                    </div>
                  <div class="navbar-item">
-                    <a   class="navbar-item" href="logout.php">LOGOUT</a>
+                    <a   class="navbar-item" href="user/logout.php">LOGOUT</a>
                    </div>
                  <div class="navbar-item">
-                    <a href="feedback.php" class="navbar-item">FEEDBACK</a>
+                    <a href="#" class="navbar-item">FEEDBACK</a>
                    </div>
          </div> 
 			<?php

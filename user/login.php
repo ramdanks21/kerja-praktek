@@ -1,15 +1,15 @@
 <?php 
-include '../db/koneksi.php';
-include '../user/navbar.php';
+include 'koneksi.php';
+include 'navbar.php';
 if (isset($_POST['submit'])) {
   $count=0;
   $rest=mysqli_query($con,"SELECT * FROM student WHERE username='$_POST[username]' && password='$_POST[password]';");
   $count=mysqli_num_rows($rest);
   if ($count==0) {
     ?>
-    <!-- <script type="text/javascript">
+    <script type="text/javascript">
       alert("The Username Success");
-    </script> -->
+    </script>
     <div class="alert alert-primary" role="alert" width="50" height="50">
   The username and password does't match
 </div>
@@ -19,7 +19,7 @@ if (isset($_POST['submit'])) {
     ?>
     <script>
       alert("LOGIN BERHASIL");
-      window.location="/index.php";
+      window.location="index.php";
     </script>
     <?php 
   }

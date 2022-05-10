@@ -1,4 +1,7 @@
- 
+ <?php 
+ include "koneksi.php";
+ include_once "navbar.php"
+ ?>
 <!DOCTYPE html>
 <html>
 
@@ -10,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;700&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/15181efa86.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="../css/register.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
     <link rel="stylesheet" href="/css/form.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -30,7 +33,7 @@
               <h1 class="title is-4">Sign up today</h1>
               <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
               
-              <form action="/index.php" method="POST" >
+              <form action="" method="POST" >
                 <div class="field">
                   <div class="control">
                     <input class="input is-medium has-text-primary" type="text"  name="firstname" placeholder="Firstname">
@@ -54,7 +57,7 @@
                 </div>
                 <div class="field">
                   <div class="control">
-                    <input class="input is-medium" type="text" name="roll" placeholder="Rool NO">
+                    <input class="input is-medium" type="text" name="roll" placeholder="Rool NO">`
                   </div>
                 </div>
                 <div class="field">
@@ -112,51 +115,104 @@
 
 </html>
 
-<?php 
-include "../db/koneksi.php";
-
-if (isset($_POST['submit'])) {
-  
-  
-    
-mysqli_query($con,"INSERT INTO student SET 
-firstname= '$_POST[firstname]',
-lastname= '$_POST[lastname]',
-username= '$_POST[username]',
-password= '$_POST[password]',
-roll= '$_POST[roll]',
-email= '$_POST[email]',
-contact= '$_POST[contact]'
-
-
-");
+ 
 
  
 
-}
-
-
-?>
 
 <?php 
 
-if (isset($_POST['submit'])) {
-  $firstname='$_POST[username]';
-  $lastname='$_POST[lastname]';
-  $username='$_POST[username]';
-  $password='$_POST[password]';
-  $roll='$_POST[roll]';
-  $email='$_POST[email]';
-  $contact='$_POST[contact]';
-  $sql= "SELECT * FROM student WHERE username='$username";
-  $sqli= mysqli_query($con,$sql);
-  $cek = mysqli_num_rows($sqli);
-  if ($cek == 0) {
-    mysqli_query($con,"INSERT INTO student VALUES('$firsname','$lastname','$username','$password','$roll','$email','$contact')");
-  }else {
-    echo "FORM SUDAH ADA YANG MENGGUNAKAN" ;
+
+// if (isset($_POST['submit'])) {
+// $firstname = $_POST['firstname'];
+// $usernamee = $_POST['username'];
+// $lastname = $_POST['lastname'];
+// $passwords = $_POST['password'];
+// $roll = $_POST['roll'];
+// $email = $_POST['email'];
+// $contact = $_POST['contact'];
+  
+//   mysqli_query($con,"INSERT INTO student SET
+  
+//   firstname='$firstname',
+//   lastname='$lastname',
+//   username='$usernamee',
+//   password='$passwords',
+//   roll='$roll',
+//   email='$email',
+//   contact='$contact';"); 
+  
+//   echo "DATA TELAH TERSIMAPN" ;
+// }
+
+// ?>
+// <?php 
+
+// if (isset($_POST['submit'])) {
+//   $firstname = $_POST['firstname'];
+// $usernamee = $_POST['username'];
+// $lastname = $_POST['lastname'];
+// $passwords = $_POST['password'];
+// $roll = $_POST['roll'];
+// $email = $_POST['email'];
+// $contact = $_POST['contact'];
+//   $sql= "SELECT * FROM student WHERE username='$usernamee";
+//   $sqli= mysqli_query($con,$sql);
+//   $cek = mysqli_num_rows($sqli);
+//   if ($cek == 0) {
+//     mysqli_query($con,"INSERT INTO student SET
+  
+//   firstname='$firstname',
+//   lastname='$lastname',
+//   username='$usernamee',
+//   password='$passwords',
+//   roll='$roll',
+//   email='$email',
+//   contact='$contact'"); 
+//   }else {
+//     echo "FORM SUDAH ADA YANG MENGGUNAKAN" ;
+//   }
+
+// }
+  
+   ?>
+
+
+<?php 
+if(isset($_POST['submit']))
+{
+  $count=0;
+
+  $sql="SELECT username from student";
+  $res=mysqli_query($con,$sql);
+
+  while($row=mysqli_fetch_assoc($res))
+  {
+    if($row['username']==$_POST['username'])
+    {
+      $count=$count+1;
+    }
+  }
+  if($count==0)
+  {
+    mysqli_query($con,"INSERT INTO student VALUES('$_POST[firstname]', '$_POST[lastname]', '$_POST[username]', '$_POST[password]', '$_POST[roll]', '$_POST[email]', '$_POST[contact]', 'p.jpg');");
+  ?>
+    <script type="text/javascript">
+     alert("Registration successful");
+    </script>
+  <?php
+  }
+  else
+  {
+
+    ?>
+      <script type="text/javascript">
+        alert("FORM YANG ANDA INPUT SUDAH TERDAFTAR.");
+      </script>
+    <?php
+
   }
 
 }
-  
-   ?>
+
+?>

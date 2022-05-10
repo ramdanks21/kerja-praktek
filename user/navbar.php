@@ -43,7 +43,7 @@ session_start();
          <a  class="navbar-item">LOGOUT</a>
         </div>  
       <div class="navbar-item">
-         <a href="feedback.php" class="navbar-item">ABOUT US</a>
+         <a href="feedback.php" class="navbar-item">FEEDBACK </a>
         </div>
       </div>
     </div>

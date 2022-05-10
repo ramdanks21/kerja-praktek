@@ -30,7 +30,7 @@
               <h1 class="title is-4">Sign up today</h1>
               <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
               
-              <form action="/index.php" method="POST" >
+              <form action="index.php" method="POST" >
                 <div class="field">
                   <div class="control">
                     <input class="input is-medium has-text-primary" type="text"  name="firstname" placeholder="Firstname">
@@ -52,11 +52,7 @@
                     <input class="input is-medium" type="password" name="password" placeholder="Password">
                   </div>
                 </div>
-                <div class="field">
-                  <div class="control">
-                    <input class="input is-medium" type="text" name="roll" placeholder="Rool NO">
-                  </div>
-                </div>
+                
                 <div class="field">
                   <div class="control">
                     <input class="input is-medium" type="email" name="email" placeholder="Email">
@@ -119,12 +115,11 @@ if (isset($_POST['submit'])) {
   
   
     
-mysqli_query($con,"INSERT INTO student SET 
+mysqli_query($con,"INSERT INTO 'admin' SET 
 firstname= '$_POST[firstname]',
 lastname= '$_POST[lastname]',
 username= '$_POST[username]',
 password= '$_POST[password]',
-roll= '$_POST[roll]',
 email= '$_POST[email]',
 contact= '$_POST[contact]'
 
@@ -145,14 +140,13 @@ if (isset($_POST['submit'])) {
   $lastname='$_POST[lastname]';
   $username='$_POST[username]';
   $password='$_POST[password]';
-  $roll='$_POST[roll]';
   $email='$_POST[email]';
   $contact='$_POST[contact]';
-  $sql= "SELECT * FROM student WHERE username='$username";
+  $sql= "SELECT * FROM 'admin' WHERE username='$username";
   $sqli= mysqli_query($con,$sql);
   $cek = mysqli_num_rows($sqli);
   if ($cek == 0) {
-    mysqli_query($con,"INSERT INTO student VALUES('$firsname','$lastname','$username','$password','$roll','$email','$contact')");
+    mysqli_query($con,"INSERT INTO 'admin' VALUES('$firsname','$lastname','$username','$password','$email','$contact')");
   }else {
     echo "FORM SUDAH ADA YANG MENGGUNAKAN" ;
   }
