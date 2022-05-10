@@ -30,7 +30,8 @@
               <h1 class="title is-4">Sign up today</h1>
               <p class="description">Lorem ipsum dolor, sit amet consectetur adipisicing elit</p>
               
-              <form action="index.php" method="POST" >
+
+              <form action="" method="POST" >
                 <div class="field">
                   <div class="control">
                     <input class="input is-medium has-text-primary" type="text"  name="firstname" placeholder="Firstname">
@@ -115,7 +116,8 @@ if (isset($_POST['submit'])) {
   
   
     
-mysqli_query($con,"INSERT INTO 'admin' SET 
+ 
+mysqli_query($con,"INSERT INTO admin SET 
 firstname= '$_POST[firstname]',
 lastname= '$_POST[lastname]',
 username= '$_POST[username]',
@@ -142,11 +144,12 @@ if (isset($_POST['submit'])) {
   $password='$_POST[password]';
   $email='$_POST[email]';
   $contact='$_POST[contact]';
-  $sql= "SELECT * FROM 'admin' WHERE username='$username";
+
+  $sql= "SELECT * FROM admin WHERE username='$username";
   $sqli= mysqli_query($con,$sql);
   $cek = mysqli_num_rows($sqli);
   if ($cek == 0) {
-    mysqli_query($con,"INSERT INTO 'admin' VALUES('$firsname','$lastname','$username','$password','$email','$contact')");
+    mysqli_query($con,"INSERT INTO admin VALUES('$firsname','$lastname','$username','$password','$roll','$email','$contact')");
   }else {
     echo "FORM SUDAH ADA YANG MENGGUNAKAN" ;
   }

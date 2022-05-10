@@ -19,7 +19,7 @@ session_start();
   <section class="bg-image p-2">
     
   
-  <nav class="navbar-item  " role="navigation"  aria-label="main navigation">
+  <nav class="navbar-item navbar-dark " role="navigation"  aria-label="main navigation">
     <div class="navbar-brand">
       <a class="navbar-item" href="index.php">
         <img src="../img/brandsmp.png" alt="SMA ISLAM BAHRUL ULUM" >
@@ -36,7 +36,7 @@ session_start();
 
     <?php
 
-		if(isset($_SESSION['login_user']))
+		if(isset($_SESSION['login_admin']))
 		{
 			?>
 				 <div class="navbar-end">
@@ -65,16 +65,14 @@ session_start();
       
       <div class="navbar-item">
          <a href="
-         user/books.php" class="navbar-item">BOOKS</a>
+         books.php" class="navbar-item">BOOKS</a>
         </div>
       <div class="navbar-item">
-         <a   class="navbar-item" href="user/login.php">STUDENT-LOGIN</a>
+         <a   class="navbar-item" href="login.php">LOGIN</a>
         </div>
+        
       <div class="navbar-item">
-         <a href="#" class="navbar-item">ADMIN-LOGIN</a>
-        </div>  
-      <div class="navbar-item">
-         <a href="user/feedback.php" class="navbar-item">FEEDBACK</a>
+         <a href="feedback.php" class="navbar-item">FEEDBACK</a>
         </div>
       </div>
       <?php

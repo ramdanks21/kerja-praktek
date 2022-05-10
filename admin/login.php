@@ -1,7 +1,6 @@
 <?php 
-
 include '../db/koneksi.php';
-include '../user/navbar.php';
+include 'navbar.php';
 if (isset($_POST['submit'])) {
   $count=0;
   $rest=mysqli_query($con,"SELECT * FROM admin WHERE username='$_POST[username]' && password='$_POST[password]';");
@@ -16,11 +15,11 @@ if (isset($_POST['submit'])) {
 </div>
     <?php 
   }else {
-    $_SESSION['login_user'] = $_POST['username'];
+    $_SESSION['login_admin'] = $_POST['username'];
     ?>
     <script>
       alert("LOGIN BERHASIL");
-      window.location="index.php";
+      window.location="/index.php";
     </script>
     <?php 
   }

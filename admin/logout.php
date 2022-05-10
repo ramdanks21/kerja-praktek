@@ -4,5 +4,5 @@
 	{
 		unset($_SESSION['login_admin']);
 	}
-	header("location:/index.php");
+	header("location:index.php");
 ?>
